@@ -16,7 +16,7 @@ REPO="https://github.com/dolphin-emu/dolphin.git"
 # Determine to build nightly or stable
 if [ "$DEVEL" = 'true' ]; then
 	echo "Making nightly build of dolphin-emu..."
-	VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
+	VERSION="42d5f2b"
 	UPINFO="$(echo "$UPINFO" | sed 's|latest|nightly|')"
 	git clone "$REPO" ./dolphin
 else
